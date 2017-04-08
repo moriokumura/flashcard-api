@@ -39,14 +39,27 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    awesome_print (1.7.0)
+    bcrypt (3.1.11)
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.2.3)
     byebug (9.0.6)
+    coderay (1.1.1)
     concurrent-ruby (1.0.5)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
     ffi (1.9.18)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.8.1)
+    jbuilder (2.6.3)
+      activesupport (>= 3.0.0, < 5.2)
+      multi_json (~> 1.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -60,11 +73,19 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
+    multi_json (1.12.1)
     nio4r (2.0.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-rails (0.3.6)
+      pry (>= 0.10.4)
     puma (3.8.2)
     rack (2.0.1)
+    rack-cors (0.4.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.2)
@@ -94,6 +115,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    slop (3.6.0)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -119,14 +141,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
+  bcrypt (~> 3.1.7)
+  better_errors
+  binding_of_caller
   byebug
+  jbuilder (~> 2.5)
   listen (~> 3.0.5)
+  pry
+  pry-rails
   puma (~> 3.0)
+  rack-cors
   rails (~> 5.0.2)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
-  tzinfo-data
 
 BUNDLED WITH
    1.14.6
