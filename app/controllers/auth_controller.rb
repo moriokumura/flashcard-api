@@ -1,5 +1,5 @@
 class AuthController < ApplicationController
-  before_action :authenticate, skip: [:login]
+  before_action :authenticate, except: [:login]
 
   # POST /login
   def login
@@ -7,7 +7,7 @@ class AuthController < ApplicationController
     if user&.authenticate(params[:password])
       # login
       user.expire_access_tokens
-      @access_token = user.access_tokens.create!(token: SecureRandom.hex)
+      @access_token = user.access_tokens.create!(token: SecureRandom.hex)&.token
     else
       # failed
       @error = 'Wrong Mail or Password.'
